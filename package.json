@@ -1,0 +1,28 @@
+{
+  "name": "github-actions-ci-cd-nodejs",
+  "version": "0.0.1",
+  "description": "test for github-actions-runner",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2pai/github-actions-ci-cd-nodejs.git"
+  },
+  "author": "2pai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2pai/github-actions-ci-cd-nodejs/issues"
+  },
+  "homepage": "https://github.com/2pai/github-actions-ci-cd-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.1-security"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "supertest": "^4.0.2"
+  }
+}
