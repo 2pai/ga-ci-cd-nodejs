@@ -18,16 +18,18 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Deploy using ssh
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          port: 22
-          script: |
-            cd ~/apps/ga-ci-cd-nodejs
-            git pull origin master
-            git status
-            npm install --only=prod
-            pm2 restart YoutubeApp
+      - name: CD
+        run: echo 'CD is Disabled (Check workflow comment for the code).'
+      # - name: Deploy using ssh
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key: ${{ secrets.PRIVATE_KEY }}
+      #     port: 22
+      #     script: |
+      #       cd ~/apps/ga-ci-cd-nodejs
+      #       git pull origin master
+      #       git status
+      #       npm install --only=prod
+      #       pm2 restart YoutubeApp
